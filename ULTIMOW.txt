@@ -1,0 +1,338 @@
+=====================================================================
+⚠️  PROMPT ULTIMO - CO-PARENT SHIELD V100.100 (MAX) ⚠️
+AUDITORIA CARRASCO EXTREMA - IMPLEMENTAÇÃO 100% OBRIGATÓRIA
+=====================================================================
+
+🔥 **INSTRUÇÕES CRÍTICAS ANTES DE COMEÇAR:**
+1. Leia TODO o conteúdo 3 vezes antes de codificar
+2. Cada etapa deve ser informada com status [EM ANDAMENTO/CONCLUÍDA/ERRO]
+3. Em caso de bug, sistema deve alertar em 🔴 VERMELHO o próximo passo
+4. Ao final de cada correção, lembre em 🔴 ALERTA VERMELHO: "VOLTE AO DETERMINADO NO PROMPT ULTIMO"
+5. Responda com análise profissional como se fosse para venda enterprise
+6. Implemente 100% - sem desculpas, sem atalhos, sem "futuro"
+
+=====================================================================
+CAMADA 1: VISÃO ESTRATÉGICA BILÍNGUE (PT/EN)
+=====================================================================
+
+[PT-BR] Você é ENGENHEIRO(A) FULL-STACK SÊNIOR + PRODUCT DESIGNER + ARQUITETO(A) DE PRODUTO + AUDITOR(A) CARRASCO EXTREMO. 
+Sua missão: construir o SaaS **Co-Parent Shield** como o produto definitivo de co-parenting para os próximos 10 anos.
+
+[EN] You are a SENIOR FULL-STACK ENGINEER + PRODUCT DESIGNER + PRODUCT ARCHITECT + RUTHLESS EXTREME AUDITOR.
+Your mission: build **Co-Parent Shield** as the definitive co-parenting SaaS for the next 10 years.
+
+🎯 **FILOSOFIA DE PRODUTO:**
+- Foco em alto conflito com segurança emocional e jurídica REAL
+- Court-friendly DE VERDADE (não simulação)
+- IA em 3 camadas: LENS (análise) + SHIELD (resposta) + GUIDE (explicação)
+- B2C + B2B (advogados, terapeutas, times)
+- Diferenciais que esmagam concorrentes (OurFamilyWizard, TalkingParents, etc.)
+
+🚀 **STACK DEFINITIVA 2025-2035:**
+- Next.js 14+ (App Router) + TypeScript STRICT
+- Supabase (Postgres + Auth + RLS + Storage)
+- React + Tailwind + shadcn/ui + Radix
+- Stripe (B2C/B2B) + React Query + Zod
+- OpenAI + multi-providers + fallback heurístico 100%
+- Sentry + OTel + Prometheus + logs sem PII
+- Testes completos + k6 + e2e
+
+=====================================================================
+CAMADA 2: ARQUITETURA TÉCNICA CARRASCO++
+=====================================================================
+
+📁 **ESTRUTURA OBRIGATÓRIA:**
+```
+apps/web/
+├── app/
+│   ├── (marketing)/          # Landing, pricing, login, signup
+│   ├── (app)/app/            # Dashboard autenticado
+│   └── api/                  # TODAS as rotas /api
+├── lib/
+│   ├── auth.ts              # Supabase Auth server-side
+│   ├── supabase.ts          # Client admin
+│   ├── crypto/              # Court Pack assinatura
+│   ├── ai/                  # LENS/SHIELD/GUIDE + Judge Loop
+│   ├── plan-limits.ts       # Limites por plano
+│   ├── usage.ts             # Verificação de uso
+│   ├── metrics.ts           # Prometheus
+│   └── otel.ts              # OpenTelemetry
+├── components/
+│   ├── ui/                  # shadcn/ui components
+│   └── dashboard/           # UI específicas
+├── tests/                   # Unitários
+├── tests-e2e/              # End-to-end
+└── load/                   # k6 scripts
+supabase/
+├── migrations/             # SQL schema + RLS
+└── seed.sql               # Dados iniciais
+```
+
+🗄️ **SCHEMA COMPLETO (RLS OBRIGATÓRIO):**
+- `profiles` - Usuários autenticados
+- `human_profiles` - Contexto pessoal extra para IA
+- `cases` - Casos de co-parenting
+- `case_members` - Controle de acesso por caso
+- `messages` - Todas as mensagens (inbound/outbound)
+- `analyses` - Resultados LENS/SHIELD/GUIDE
+- `ai_call_logs` - Logs de chamadas IA
+- `subscriptions` - Planos Stripe
+- `calendar_events` - Eventos por caso
+- `message_receipts` - Confirmações de leitura
+- `export_verifications` - Court Pack append-only
+- `audit_events` - Auditoria append-only
+- `notifications` - Centro de notificações
+- `emotion_checkins` - Check-ins emocionais
+
+🔐 **POLÍTICAS DE SEGURANÇA:**
+- RLS em TODAS as tabelas
+- Auth real via getSessionUser() - SEM x-user-id
+- Service role APENAS em export/webhook/audit
+- CSP headers + Security headers
+- Segredos NUNCA no front
+- Logs sem PII (conteúdo de mensagens)
+
+=====================================================================
+CAMADA 3: MÓDULOS OBRIGATÓRIOS 100% IMPLEMENTADOS
+=====================================================================
+
+🤖 **IA CORE (LENS/SHIELD/GUIDE):**
+- LENS: risk_score 0-100, labels, summary, semaphore green/yellow/red
+- SHIELD: neutral_reply + Judge Loop com métricas
+- GUIDE: tip explicativo sem diagnóstico/jurídico
+- Fallback heurístico completo (FORCE_HEURISTIC=true)
+- Multi-provider com estrutura pronta
+
+⚖️ **COURT PACK (PROVA FORENSE):**
+- Export JSON/PDF com timeline completa
+- Manifesto SHA-256 + assinatura ECDSA P-256
+- AUTH CODE de 24 hex chars verificável publicamente
+- Verificador em /api/verify + página /landing/verify
+- Tabelas append-only (sem UPDATE/DELETE)
+- Helpers crypto completos em Node.js
+
+💰 **PLANOS E LIMITES:**
+- free: 1 caso, 10 msgs/dia, sem court pack
+- starter: 3 casos, 50 msgs/dia, court pack + áudio
+- pro: 10 casos, 200 msgs/dia, tudo liberado
+- b2b: 50 casos, 1000 msgs/dia, features enterprise
+- Verificação em tempo real em toda rota crítica
+
+🔔 **NOTIFICAÇÕES IN-APP:**
+- risk_alert (análises red)
+- plan_limit (80% do limite)
+- system/onboarding
+- Centro completo em /app/notifications
+- Badge de não lidas no header
+
+💭 **MÓDULO EMOCIONAL (CÍRCULO):**
+- Check-ins diários por caso
+- Intensidade 0-10 + emoção principal
+- Timeline com gráfico sparkline
+- Integração com radar de risco
+
+📊 **OBSERVABILIDADE COMPLETA:**
+- Sentry client + server (sem PII)
+- Métricas Prometheus em /api/metrics
+- OTel spans em toda operação
+- Health check em /api/health
+- Readiness check em /api/healthz/readiness
+
+=====================================================================
+CAMADA 4: ROTAS API OBRIGATÓRIAS
+=====================================================================
+
+🔥 **ROTAS PRINCIPAIS:**
+- `POST /api/analyze-message` - Análise completa LENS/SHIELD/GUIDE
+- `POST /api/message/preflight` - Revisão pré-envio
+- `GET /api/cases/[id]/export` - Court Pack JSON/PDF
+- `GET /api/verify` - Verificador público
+- `GET /api/notifications` - Lista notificações
+- `POST /api/notifications/read` - Marcar lidas
+- `POST /api/emotions/checkin` - Registrar emoção
+- `GET /api/emotions/timeline` - Timeline emocional
+- `GET /api/usage/summary` - Uso vs limites
+- `GET /api/metrics` - Métricas Prometheus
+- `GET /api/health` - Health check simples
+- `GET /api/healthz/readiness` - DB + Redis check
+
+🛡️ **MIDDLEWARES:**
+- Rate limit por IP (120 req/min)
+- Rate limit por caso (20 req/min)
+- CSP headers
+- Security headers
+- Auth check em todas rotas /api
+
+=====================================================================
+CAMADA 5: AUDITORIA CARRASCO EXTREMA
+=====================================================================
+
+🔍 **CHECKLIST OBRIGATÓRIO (RESPOSTA EXIGIDA):**
+
+[-1] LEITURA DO PDF CONTEXTO (se existir):
+   [ ] PDF lido e entendido como contexto apenas
+   [ ] Conflitos resolvidos a favor deste prompt
+
+[0] VISÃO E PRODUTO:
+   [ ] Entendido Co-Parent Shield como SaaS definitivo
+   [ ] Diferenciais claros vs concorrentes
+   [ ] Stack 2025-2035 definida
+
+[1] ESTRUTURA DE PASTAS:
+   [ ] apps/web/app/(marketing) criado
+   [ ] apps/web/app/(app)/app criado
+   [ ] apps/web/lib/ com todos helpers
+   [ ] apps/web/components/ com shadcn/ui
+   [ ] tests/, tests-e2e/, load/ criados
+
+[2] SUPABASE + SCHEMA:
+   [ ] Todas as tabelas criadas com migrations
+   [ ] RLS habilitado em TODAS as tabelas
+   [ ] Policies por auth.uid() funcionando
+   [ ] Funções SQL de limites criadas
+
+[3] AUTENTICAÇÃO:
+   [ ] getSessionUser() implementado
+   [ ] Layout autenticado com redirect
+   [ ] Sem uso de x-user-id em rotas
+
+[4] IA CORE:
+   [ ] LENS funcionando (heuristic + OpenAI)
+   [ ] SHIELD com Judge Loop implementado
+   [ ] GUIDE com disclaimers
+   [ ] FORCE_HEURISTIC funcionando
+
+[5] COURT PACK:
+   [ ] Export JSON com verification completo
+   [ ] Export PDF gerando arquivo > 0 bytes
+   [ ] Assinatura ECDSA P-256 funcionando
+   [ ] AUTH CODE de 24 chars hex
+   [ ] /api/verify validando corretamente
+   [ ] Tabelas append-only sem UPDATE/DELETE
+
+[6] PLANOS E LIMITES:
+   [ ] planLimits.ts com todos planos
+   [ ] checkPlanLimits() funcionando
+   [ ] Retorno 403 PLAN_LIMIT_REACHED
+   [ ] Dashboard com barras de progresso
+
+[7] NOTIFICAÇÕES:
+   [ ] Tabela notifications com RLS
+   [ ] GET /api/notifications funcionando
+   [ ] POST /api/notifications/read funcionando
+   [ ] UI /app/notifications completa
+   [ ] Badge não lidas no header
+
+[8] EMOCIONS:
+   [ ] Tabela emotion_checkins com RLS
+   [ ] POST /api/emotions/checkin funcionando
+   [ ] GET /api/emotions/timeline funcionando
+   [ ] UI com gráfico sparkline
+
+[9] OBSERVABILIDADE:
+   [ ] Sentry inicializado client + server
+   [ ] Métricas em /api/metrics
+   [ ] OTel spans nas operações
+   [ ] /api/health retornando ok: true
+   [ ] /api/healthz/readiness com DB + Redis
+
+[10] RATE LIMIT:
+    [ ] Middleware por IP funcionando
+    [ ] Rate limit por caso ativo
+    [ ] Retorno 429 com Retry-After
+
+[11] TESTES:
+    [ ] Unitários para crypto, judge, validators
+    [ ] e2e para export + verify
+    [ ] k6 script funcionando
+
+[12] BUILD E DEPLOY:
+    [ ] npm run typecheck sem erros
+    [ ] npm run build sucesso
+    [ ] Dockerfile standalone funcional
+
+[13] SEGURANÇA:
+    [ ] Sem segredos no front
+    [ ] CSP headers ativos
+    [ ] Security headers ativos
+    [ ] Logs sem PII
+
+[14] PERFORMANCE:
+    [ ] k6 p95 < 500ms
+    [ ] Taxa de erro < 1%
+    [ ] OTel spans configurados
+
+[15] DOCUMENTAÇÃO:
+    [ ] openapi.yaml completo
+    [ ] .env.example com todas vars
+    [ ] README com setup completo
+
+=====================================================================
+CAMADA 6: EXECUÇÃO E VERIFICAÇÃO
+=====================================================================
+
+🔥 **FLUXO DE EXECUÇÃO OBRIGATÓRIO:**
+
+1. **SETUP INICIAL:**
+   ```bash
+   export DATABASE_URL=postgres://user:pass@host:5432/db
+   npm install
+   npm run db:migrate
+   npm run db:seed
+   ```
+
+2. **VERIFICAÇÃO DE BUILD:**
+   ```bash
+   npm run typecheck  # deve ser 100% ok
+   npm run build      # deve ser 100% ok
+   npm test           # todos testes passando
+   ```
+
+3. **EXECUÇÃO LOCAL:**
+   ```bash
+   npm run dev
+   # Testar: GET /api/health → { ok: true }
+   ```
+
+4. **TESTE COURT PACK:**
+   ```bash
+   # Criar caso, exportar JSON, verificar code
+   curl "http://localhost:3000/api/cases/{id}/export?format=json"
+   curl "http://localhost:3000/api/verify?code=XXXXX"
+   ```
+
+5. **TESTE DE CARGA:**
+   ```bash
+   FORCE_HEURISTIC=true k6 run load/k6-shield-test.js
+   ```
+
+=====================================================================
+CAMADA 7: PERGUNTA FINAL OBRIGATÓRIA
+=====================================================================
+
+🚨 **RESPONDA EXPLICITAMENTE:**
+
+"VOCÊ IMPLEMENTOU 100% DO PROMPT ULTIMO CO-PARENT SHIELD?
+- Se SIM: confirme cada item do checklist [-1 a 15] com [OK]
+- Se NÃO: liste EXATAMENTE o que falta, POR QUE não implementou, e quais arquivos/rotas precisam ser criados/corrigidos
+
+NÃO aceite implementações parciais. NÃO adie itens críticos. 
+Se algo falhar, CORRIJA e REPITA a auditoria até 100% OK."
+
+=====================================================================
+INSTRUÇÕES DE USO NO WINDSURF
+=====================================================================
+
+1. Copie TODO o conteúdo deste arquivo
+2. Cole como PRIMEIRA mensagem no Windsurf
+3. Exija resposta completa do checklist
+4. Se algum item estiver [PENDENTE], exija correção imediata
+5. Não aceite "vou implementar depois" - implemente AGORA
+
+=====================================================================
+FIM DO PROMPT ULTIMO - V100.100 (MAX)
+=====================================================================
+
+💀 **AUDITORIA CARRASCO:** Este prompt é extremamente detalhado porque
+produtos enterprise precisam de implementação 100% sem gaps.
+Sem desculpas, sem atalhos, sem "futuro". IMPLEMENTE TUDO AGORA! 💀
